@@ -2,7 +2,7 @@
  * @splidejs/splide-extension-auto-scroll
  * Version  : 0.5.3
  * License  : MIT
- * Copyright: 2023 Naotoshi Fujita
+ * Copyright: 2025 Naotoshi Fujita
  */
 (function (factory) {
   typeof define === 'function' && define.amd ? define(factory) : factory();
@@ -493,7 +493,9 @@
     }
 
     function autoStart() {
-      if (autoScrollOptions.autoStart) {
+      if (autoScrollOptions.autoStart === "immediately") {
+        play();
+      } else if (autoScrollOptions.autoStart === true) {
         if (document.readyState === "complete") {
           play();
         } else {

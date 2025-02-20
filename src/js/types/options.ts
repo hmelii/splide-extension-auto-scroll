@@ -29,7 +29,7 @@ export interface AutoScrollOptions {
   /**
    * Determines whether to start scrolling the slider after initialization.
    */
-  autoStart?: boolean;
+  autoStart?: boolean | 'immediately';
 
   /**
    * Determines whether to rewind the slider when it reaches the end.

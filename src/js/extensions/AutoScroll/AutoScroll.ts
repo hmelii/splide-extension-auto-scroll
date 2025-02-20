@@ -227,7 +227,9 @@ export function AutoScroll( Splide: Splide, Components: Components, options: Opt
    * Starts scrolling the slider on the proper timing.
    */
   function autoStart(): void {
-    if ( autoScrollOptions.autoStart ) {
+    if (autoScrollOptions.autoStart === 'immediately') {
+      play();
+    } else if ( autoScrollOptions.autoStart === true ) {
       if ( document.readyState === 'complete' ) {
         play();
       } else {
